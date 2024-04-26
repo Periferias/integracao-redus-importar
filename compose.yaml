@@ -1,0 +1,14 @@
+services:
+  importar:
+    build:
+      context: $PWD
+      dockerfile: $PWD/Dockerfile
+    restart: on-failure
+    volumes:
+      - $PWD/downloads:/tmp/downloads
+    ports:
+      - ${IMPORTAR_PORT}:5000
+    environment:
+      CSV_FILE_PATH: ${CSV_FILE_PATH}
+      DATABASE_URL: ${DATABASE_URL}
+      TABLE_NAME: ${TABLE_NAME}

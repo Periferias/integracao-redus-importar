@@ -1,0 +1,6 @@
+pandas
+geopandas
+dataset
+python-dotenv
+psycopg2
+python-slugify
